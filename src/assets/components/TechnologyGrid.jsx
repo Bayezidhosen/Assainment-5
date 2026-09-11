@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import technologiesData from "../data/technologies.json";
 import TechnologyCard from "./TechnologyCard";
+import YourStack from "./YourStack";
 
-function TechnologyGrid() {
+function TechnologyGrid({ stack, onAdd, onRemove, onRemoveAll }) {
   const [technologies, setTechnologies] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -30,7 +31,7 @@ function TechnologyGrid() {
       id="technologies"
       className="mx-auto max-w-6xl px-5 py-20"
     >
-      {/* Section Heading */}
+      {/* Heading */}
       <div className="mb-8">
         <h2 className="text-3xl font-extrabold text-slate-900 sm:text-4xl">
           Explore the{" "}
@@ -44,16 +45,30 @@ function TechnologyGrid() {
         </p>
       </div>
 
-      {/* Cards */}
-      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-        {technologies.map((technology) => (
-          <TechnologyCard
-            key={technology.id}
-            technology={technology}
-            onAdd={() => {}}
-            isAdded={false}
-          />
-        ))}
+      {/* Grid + Sidebar */}
+      <div className="grid gap-5 lg:grid-cols-4">
+
+        {/* Technology Cards */}
+        <div className="grid gap-5 md:grid-cols-2 lg:col-span-3">
+          {technologies.map((technology) => (
+            <TechnologyCard
+              key={technology.id}
+              technology={technology}
+              onAdd={onAdd}
+              isAdded={stack.some(
+                (item) => item.id === technology.id
+              )}
+            />
+          ))}
+        </div>
+
+        {/* Your Stack */}
+        <YourStack
+          stack={stack}
+          onRemove={onRemove}
+          onRemoveAll={onRemoveAll}
+        />
+
       </div>
     </section>
   );
