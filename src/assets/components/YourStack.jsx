@@ -1,6 +1,6 @@
 function YourStack({ stack, onRemove, onRemoveAll }) {
   return (
-    <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+    <aside className="h-fit rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-24">
 
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -37,7 +37,7 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
           {stack.map((technology) => (
             <div
               key={technology.id}
-              className="flex items-center justify-between rounded-lg border border-slate-200 p-3"
+              className="flex items-center justify-between rounded-lg border border-slate-200 bg-white p-3 transition hover:border-slate-300"
             >
               <div className="flex items-center gap-3">
 
@@ -62,7 +62,7 @@ function YourStack({ stack, onRemove, onRemoveAll }) {
               {/* Remove */}
               <button
                 onClick={() => onRemove(technology.id)}
-                className="text-lg text-slate-400 transition hover:text-red-500"
+                className="text-sm text-slate-400 transition hover:text-red-500"
                 title="Remove"
               >
                 ✕

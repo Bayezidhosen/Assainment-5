@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
-@plugin "daisyui";
-
 :root {
   --brand-gradient: linear-gradient(
-    135deg,
+    90deg,
     #ff6b35,
     #e91e63,
     #8b5cf6
   );
 }
 
-* {
-  box-sizing: border-box;
+.brand-gradient {
+  background: var(--brand-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 html {
@@ -21,24 +21,7 @@ html {
 
 body {
   margin: 0;
-  min-width: 320px;
   background: #ffffff;
-  color: #111827;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.brand-gradient {
-  background: var(--brand-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.gradient-button {
-  background: var(--brand-gradient);
-}
-
-button,
-a {
-  cursor: pointer;
+  color: #0f172a;
+  font-family: Arial, sans-serif;
 }

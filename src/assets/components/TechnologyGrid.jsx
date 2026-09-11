@@ -49,7 +49,7 @@ function TechnologyGrid({ stack, onAdd, onRemove, onRemoveAll }) {
       <div className="grid gap-5 lg:grid-cols-4">
 
         {/* Technology Cards */}
-        <div className="grid gap-5 md:grid-cols-2 lg:col-span-3">
+        <div className="grid gap-5 md:grid-cols-3 lg:col-span-3">
           {technologies.map((technology) => (
             <TechnologyCard
               key={technology.id}
