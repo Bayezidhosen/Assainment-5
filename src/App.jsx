@@ -18,13 +18,17 @@ function App() {
     );
 
     if (alreadyAdded) {
-      toast.warning(`${technology.name} is already in your stack!`);
+      toast.warning(
+        `${technology.name} is already in your stack!`
+      );
       return;
     }
 
     setStack([...stack, technology]);
 
-    toast.success(`${technology.name} added to your stack!`);
+    toast.success(
+      `${technology.name} added to your stack!`
+    );
   };
 
   // Remove Technology
@@ -51,16 +55,21 @@ function App() {
 
     setStack([]);
 
-    toast.info("All technologies removed from your stack.");
+    toast.info(
+      "All technologies removed from your stack."
+    );
   };
 
   return (
     <div className="min-h-screen bg-white">
 
+      {/* Navbar */}
       <Navbar />
 
+      {/* Hero */}
       <Hero />
 
+      {/* Technologies */}
       <TechnologyGrid
         stack={stack}
         onAdd={handleAdd}
@@ -68,6 +77,10 @@ function App() {
         onRemoveAll={handleRemoveAll}
       />
 
+      {/* Footer */}
+      <Footer />
+
+      {/* Toast Notifications */}
       <ToastContainer
         position="top-right"
         autoClose={2000}
