@@ -3,15 +3,16 @@
 :root {
   --brand-gradient: linear-gradient(
     90deg,
-    #ff6b35,
-    #e91e63,
-    #8b5cf6
+    #ff6b35 0%,
+    #e91e63 50%,
+    #8b5cf6 100%
   );
 }
 
 .brand-gradient {
   background: var(--brand-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

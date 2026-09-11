@@ -29,7 +29,7 @@ function Navbar() {
             onClick={closeMenu}
             className="flex items-center gap-2"
           >
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 text-xs font-bold text-white">
+            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-linear-to-r from-orange-400 via-pink-500 to-violet-500 text-xs font-bold text-white">
               DS
             </div>
 
