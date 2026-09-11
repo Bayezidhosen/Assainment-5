@@ -13,7 +13,7 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2">
 
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-r from-orange-400 via-pink-500 to-violet-500 text-xs font-bold">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-linear-to-r from-orange-400 via-pink-500 to-violet-500 text-xs font-bold">
                 DS
               </div>
 

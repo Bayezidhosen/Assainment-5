@@ -19,9 +19,7 @@ function Hero() {
 
           {/* Description */}
           <p className="mt-6 max-w-lg text-base leading-7 text-slate-500 sm:text-lg">
-            Discover modern technologies and create a powerful
-            developer stack that matches your skills, goals, and
-            development workflow.
+           Explore frontend, backend, database, and tooling options, compare them side by side, and put together the stack that fits your next project.
           </p>
 
           {/* Buttons */}

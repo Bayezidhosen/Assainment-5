@@ -1,4 +1,4 @@
-# 🚀 Dev Stack
+#  Dev Stack
 
 Dev Stack is a modern and responsive web application where developers
 can explore different technologies and build their own personalized
@@ -27,7 +27,7 @@ Add your live website link here.
 
 ---
 
-## ✨ Features
+##  Features
 
 ### 1. Explore Technologies
 
